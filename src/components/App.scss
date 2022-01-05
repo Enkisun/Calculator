@@ -1,0 +1,89 @@
+@import "../constants/theme";
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  width: 367px;
+  margin: 0 auto;
+  border: 1px solid $border;
+  border-radius: 15px;
+  background-color: $background;
+}
+
+.inputWrapper {
+  grid-column: 1/-1;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0 22px;
+  background-color: $background;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: end;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.engineerOperationWrapper {
+  grid-column: 2/4;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.item {
+  padding: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $white;
+  font-size: 35px;
+  font-weight: bold;
+  background-color: $digit;
+  cursor: pointer;
+
+  &.operation {
+    background-color: $operation;
+  }
+
+  &.engineerOperation {
+    padding: 7px;
+    line-height: 22px;
+    font-size: 20px;
+    background-color: $engineerOperation;
+  }
+
+  &.reset {
+    background-color: $engineerOperation;
+  }
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+
+  &.multiply {
+    transform: rotate(45deg);
+  }
+}
+
+.zero {
+  grid-column: 1/3;
+  border-bottom-left-radius: 15px;
+}
+
+.equals {
+  border-bottom-right-radius: 15px;
+}
