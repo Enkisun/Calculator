@@ -1,0 +1,58 @@
+@import "../../../constants/theme";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2px;
+  width: 367px;
+  margin: 0 auto;
+  border: 1px solid $border;
+  border-radius: 15px;
+  background-color: $background;
+}
+
+.inputWrapper {
+  grid-column: 1/-1;
+  padding-top: 30px;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 0 22px;
+  background-color: $background;
+  font-size: 70px;
+  line-height: 85px;
+  text-align: end;
+  color: $white;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.reset {
+  grid-column: 1/4;
+
+  &.engineer {
+    grid-column: 1/2;
+  }
+}
+
+.engineerOperatorWrapper {
+  display: grid;
+  grid-gap: 2px;
+  grid-column: 2/4;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  pointer-events: auto;
+
+  &.multiply {
+    transform: rotate(45deg);
+  }
+}
